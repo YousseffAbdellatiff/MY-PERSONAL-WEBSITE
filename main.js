@@ -27,30 +27,27 @@ if (firstsection) {
 }
 document.addEventListener("DOMContentLoaded", () => {
   
-  // Select all elements with the class 'box' inside '.projects'
   const boxes = document.querySelectorAll('.projects .box');
-  
-  // Iterate over each box and add event listeners
+
   boxes.forEach(box => {
     
-    // Change cursor to pointer to indicate clickability
+   
     box.style.cursor = "pointer";
     
-    // Click event listener
+    
     box.addEventListener('click', () => {
       const url = box.getAttribute('data-url');
       if (url) {
-        window.location.href = url; // Redirects in the same tab
-        // Alternatively, use window.open(url, '_blank'); to open in a new tab
+        window.location.href = url; 
+       
       }
     });
     
-    // Optional: Keyboard accessibility
-    box.setAttribute('tabindex', '0'); // Make div focusable
-    box.setAttribute('role', 'button'); // Define role for assistive technologies
+    box.setAttribute('tabindex', '0'); 
+    box.setAttribute('role', 'button'); 
     
     box.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { // Check for Enter or Space key
+      if (e.key === 'Enter' || e.key === ' ') { 
         const url = box.getAttribute('data-url');
         if (url) {
           window.location.href = url;
@@ -69,13 +66,13 @@ function handleSubmit(event) {
   const email = document.getElementById('email').value;
   const message = document.getElementById('message').value;
   
-  // Create mailto link with form data
+ 
   const mailtoLink = `mailto:yousseff.abdellatiff@gmail.com?subject=Contact from ${name}&body=${encodeURIComponent(message)}%0D%0A%0D%0AFrom: ${name}%0D%0AEmail: ${email}`;
   
-  // Open default email client
+
   window.location.href = mailtoLink;
   
-  // Clear form
+  
   document.getElementById('contactForm').reset();
 }
 
