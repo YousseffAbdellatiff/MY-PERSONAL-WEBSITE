@@ -461,6 +461,7 @@ color: var(--backgroundheadingcolor);
 
 
 @media (max-width: 770px) {
+ 
 
  
     .container {
@@ -470,6 +471,7 @@ color: var(--backgroundheadingcolor);
       padding: 20px;
       overflow-x: hidden;
       width: 100%;
+      
     }
   
     .container header {
@@ -485,6 +487,8 @@ color: var(--backgroundheadingcolor);
     .container section {
       margin-left: 0;
       padding: 20px;
+      text-align: center;
+      
     }
   
     .projects .box {
